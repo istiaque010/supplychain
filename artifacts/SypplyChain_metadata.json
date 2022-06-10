@@ -1,0 +1,163 @@
+{
+	"compiler": {
+		"version": "0.4.26+commit.4563c3fc"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_index",
+						"type": "uint256"
+					}
+				],
+				"name": "stopDeliveringOrder",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_index",
+						"type": "uint256"
+					}
+				],
+				"name": "startDeliveringOrder",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "orders",
+				"outputs": [
+					{
+						"name": "title",
+						"type": "string"
+					},
+					{
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"name": "supplier",
+						"type": "address"
+					},
+					{
+						"name": "deliveryCompany",
+						"type": "address"
+					},
+					{
+						"name": "customer",
+						"type": "address"
+					},
+					{
+						"name": "status",
+						"type": "uint8"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_title",
+						"type": "string"
+					},
+					{
+						"name": "_description",
+						"type": "string"
+					},
+					{
+						"name": "_deliveryCompany",
+						"type": "address"
+					},
+					{
+						"name": "_customer",
+						"type": "address"
+					}
+				],
+				"name": "createOrder",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_index",
+						"type": "uint256"
+					}
+				],
+				"name": "declineOrder",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_index",
+						"type": "uint256"
+					}
+				],
+				"name": "acceptOrder",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"supplychain.sol": "SypplyChain"
+		},
+		"evmVersion": "byzantium",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"supplychain.sol": {
+			"keccak256": "0xc611123a8337fc313ebea5e0beb058213bf2a8d647c60b8d10f3868d573e5412",
+			"urls": [
+				"bzzr://ca0f411839c33fdc2792b9d7c39ad7c8976d1f51c2a56a64ea36cfa1e50bf750"
+			]
+		}
+	},
+	"version": 1
+}
