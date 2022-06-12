@@ -6,6 +6,29 @@
 	"output": {
 		"abi": [
 			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "",
+						"type": "address"
+					},
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "orderIndexes",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"constant": false,
 				"inputs": [
 					{
@@ -35,37 +58,12 @@
 			},
 			{
 				"constant": true,
-				"inputs": [
+				"inputs": [],
+				"name": "getOrderLength",
+				"outputs": [
 					{
 						"name": "",
 						"type": "uint256"
-					}
-				],
-				"name": "orders",
-				"outputs": [
-					{
-						"name": "title",
-						"type": "string"
-					},
-					{
-						"name": "description",
-						"type": "string"
-					},
-					{
-						"name": "supplier",
-						"type": "address"
-					},
-					{
-						"name": "deliveryCompany",
-						"type": "address"
-					},
-					{
-						"name": "customer",
-						"type": "address"
-					},
-					{
-						"name": "status",
-						"type": "uint8"
 					}
 				],
 				"payable": false,
@@ -118,6 +116,45 @@
 				"type": "function"
 			},
 			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_index",
+						"type": "uint256"
+					}
+				],
+				"name": "getOrder",
+				"outputs": [
+					{
+						"name": "",
+						"type": "string"
+					},
+					{
+						"name": "",
+						"type": "string"
+					},
+					{
+						"name": "",
+						"type": "address"
+					},
+					{
+						"name": "",
+						"type": "address"
+					},
+					{
+						"name": "",
+						"type": "address"
+					},
+					{
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"constant": false,
 				"inputs": [
 					{
@@ -130,6 +167,116 @@
 				"payable": false,
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"name": "index",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"name": "deliveryCompany",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "customer",
+						"type": "address"
+					}
+				],
+				"name": "OrderCreated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"name": "index",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"name": "deliveryCompany",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "customer",
+						"type": "address"
+					}
+				],
+				"name": "OrderDelivering",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"name": "index",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"name": "deliveryCompany",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "customer",
+						"type": "address"
+					}
+				],
+				"name": "OrderDelivered",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"name": "index",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"name": "supplier",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "deliveryCompany",
+						"type": "address"
+					}
+				],
+				"name": "OrderAccepted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"name": "index",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"name": "supplier",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "deliveryCompany",
+						"type": "address"
+					}
+				],
+				"name": "OrderDecliened",
+				"type": "event"
 			}
 		],
 		"devdoc": {
@@ -153,9 +300,9 @@
 	},
 	"sources": {
 		"supplychain.sol": {
-			"keccak256": "0xc611123a8337fc313ebea5e0beb058213bf2a8d647c60b8d10f3868d573e5412",
+			"keccak256": "0xbe3767566801be2b8454a260277e81b62131ca5b096bf53690f9708ba49b25dc",
 			"urls": [
-				"bzzr://ca0f411839c33fdc2792b9d7c39ad7c8976d1f51c2a56a64ea36cfa1e50bf750"
+				"bzzr://6ab6b00a13d2d80aab82f1eef4f5632bcf3525ea0dd98ec83d684974ed41573d"
 			]
 		}
 	},
