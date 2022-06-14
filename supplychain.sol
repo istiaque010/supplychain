@@ -1,5 +1,6 @@
-pragma solidity ^0.4.25;
- 
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.4.22 <0.9.0;
+
 contract SypplyChain{
  
     enum Status{Created, Delivering, Delivered, Accepted, Decliened}
@@ -10,8 +11,8 @@ contract SypplyChain{
     mapping(address => uint256[]) public selfOrders;
  
     struct Order{
-        string title;
-        string description;
+        string  title;
+        string  description;
         address supplier;
         address deliveryCompany;
         address customer;
@@ -93,7 +94,7 @@ contract SypplyChain{
     }
 
 
-    function getOrder(uint256 _index) public view returns (string, string, address, address, address, Status){
+    function getOrder(uint256 _index) public view returns (string memory, string memory, address, address, address, Status){
 
         Order memory order = orders[_index];
 
@@ -106,7 +107,7 @@ contract SypplyChain{
 
     }
  
-    function createOrder(string _title, string _description, address _deliveryCompany, address _customer) public returns(uint256){
+    function createOrder(string memory _title, string memory _description, address _deliveryCompany, address _customer) public returns(uint256){
          
          Order memory order = Order ({
  
