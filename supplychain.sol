@@ -101,7 +101,7 @@ contract SypplyChain{
 
     }
 
-    function getSelfOrdersLength(address _address) public view returns(unt256){
+    function getSelfOrdersLength(address _address) public view returns(uint256){
         return selfOrders[_address].length;
 
     }
